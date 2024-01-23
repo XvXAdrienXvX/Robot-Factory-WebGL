@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8" />
+  <script type="text/javascript" src="../Common/Utils.js"></script>
+  <script type="text/javascript" src="../Common/InitShaders.js"></script>
+  <script type="text/javascript" src="../Common/MVnew.js"></script>
+  <script type="text/javascript" src="../Common/ModelNode.js"></script>
+  <script type="text/javascript" src="../Common/ObjectFactory.js"></script>
+  <script type="text/javascript" src="../Primitives/Quad.js"></script>
+  <script type="text/javascript" src="../Components/Plane.js"></script>
+  <script type="text/javascript" src="../Components/Head.js"></script>
+  <script type="text/javascript" src="../Components/Torso.js"></script>
+  <script type="text/javascript" src="../Components/LeftLowerArm.js"></script>
+  <script type="text/javascript" src="../Components/LeftUpperArm.js"></script>
+  <script type="text/javascript" src="../Components/RightLowerArm.js"></script>
+  <script type="text/javascript" src="../Components/RightUpperArm.js"></script>
+  <script type="text/javascript" src="../Components/Base.js"></script>
+  <script type="text/javascript" src="../Models/Robot.js"></script>
+  <script type="text/javascript" src="../Scene/SceneNode.js"></script>
+  <script type="text/javascript" src="../Scene/Scene.js"></script>
+  <script type="text/javascript" src="../Scene/InitScene.js"></script>
+  </head>
+
+  <body>
+    <div style="display: flex; align-items: flex-start; margin-bottom: 20px;">
+      <div style="flex: 1;">
+        <div>
+          <h3>Robot controls</h3>
+          <div>base angle -180 <input id="slider6" type="range" min="-180" max="180" step="10" value="0" />180</div>
+          <div>torso angle -180 <input id="slider0" type="range" min="-180" max="180" step="10" value="0" /> 180 </div>
+          <div> head2 angle -180 <input id="slider10" type="range" min="-180" max="180" step="10" value="0"/>180 </div>  
+          <div> head1 angle -180 <input id="slider1" type="range" min="-180" max="180" step="10" value="0" /> 180</div>
+          <div>left upper arm angle -180 <input id="slider2" type="range" min="-180" max="180" step="10" value="0"/>180</div>
+          <div>left lower arm angle -180 <input id="slider3" type="range" min="-180" max="180" step="10" value="0" />180</div>
+          <div>right upper arm angle -180 <input id="slider4" type="range" min="-180" max="180" step="10" value="0" />180</div>
+          <div>right lower arm angle -180 <input id="slider5" type="range" min="-180" max="180" step="10" value="0" />180</div>
+        </div>
+        <div style="margin-top: 50px;">
+          <span><b>Use WASD keys to move the Robot</b></span>
+        </div>
+        <div style="margin-top: 50px;">
+          <h3>Camera controls</h3>
+          <label for="radius">Radius:</label>
+          <input type="range" id="radius" min="1" max="20" step="1" value="10"><br>
+      
+          <label for="theta">Theta:</label>
+          <input type="range" id="theta" min="0" max="3.14159" step="0.01" value="0.5"><br>
+      
+          <label for="phi">Phi:</label>
+          <input type="range" id="phi" min="0" max="6.28318" step="0.01" value="1.0"><br>
+      
+        </div>
+        <div style="margin-top: 50px; display: flex; align-items: flex-start; flex-direction: column;">
+          <h3>Lighting Controls</h3>
+          <label for="ambientIntensitySlider">Ambient Intensity:</label>
+          <input type="range" id="ambientIntensitySlider" min="0" max="8" step="0.1" value="4.5"><br>
+          
+          <!-- <label for="diffuseIntensitySlider">Diffuse Intensity:</label>
+          <input type="range" id="diffuseIntensitySlider" min="0" max="1" step="0.01" value="1.0"><br>
+          
+          <label for="specularIntensitySlider">Specular Intensity:</label>
+          <input type="range" id="specularIntensitySlider" min="0" max="1" step="0.01" value="1.0"><br>
+          
+          <label for="shininessSlider">Shininess:</label>
+          <input type="range" id="shininessSlider" min="1" max="128" step="1" value="100"><br> -->
+          
+
+        </div>
+      </div>
+      <div id="canvas-holder">
+        <img id = "texImage" src = "../Textures/floor.png" hidden></img>
+        <img id = "beltImage" src = "../Textures/dirty-metal-texture.jpg" hidden></img>
+        <center>
+          <canvas id="webglcanvas" width="1400" height="900"></canvas>
+        </center>
+      </div>
+    </div>
+  
+  </body>
+</html>

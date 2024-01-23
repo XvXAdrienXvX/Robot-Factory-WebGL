@@ -1,0 +1,15 @@
+1. Unzip the folder contents to a directory
+2. Download python 3
+https://www.python.org/downloads/
+
+3. Open the command line terminal, cd to the directory where the source code is:
+   example: cd C:\Users\{user}\Downloads\WebGL-Assignment3
+
+   Then run the below command:
+   
+   python3 -m http.server 1314
+   (This is necessary to load the texture from the local directory to avoid CORS browser error)
+
+4. In browser, type the blow link:
+http://127.0.0.1:1314//Pages/Index.html
+
